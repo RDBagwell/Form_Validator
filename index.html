@@ -14,27 +14,30 @@
         <form id="form">
             <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Full Name">
+                <input type="text" id="name" placeholder="Full Name" required minlength="3" maxlength="100">
             </div>
             <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" placeholder="555-555-5555">
+                <input type="tel" id="phone" placeholder="555-555-5555" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
             </div>
             <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="exsample@test.com">
+                <input type="email" id="email" placeholder="exsample@exsample.com" required>
             </div>
             <div class="form-group">
                 <label for="website">Website URL</label>
-                <input type="url" id="website" placeholder="tets.com">
+                <input type="url" id="website" placeholder="http://exsample.com" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter Password">
+                <input type="password" id="password" placeholder="Enter Password" required 
+                title="Please include 1 uppercase letter lowercase letter and 1 number."
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
             </div>
             <div class="form-group">
                 <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" placeholder="Confirm Password">
+                <input type="password" id="confirm-password" placeholder="Confirm Password" required 
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
             </div>
             <button type="submit">Register</button>
         </form>
